@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="prnt">
+                <div class="sub-nav-left ">
+                    <div class="nav-item border">
+                        <p class="blog">My Blogs</p>
+                    </div>
+                    <div class="nav-item border">
+                        <p class="item">Home</p>
+                    </div>
+                    <div class="nav-item border">
+                        <p class="item">About</p>
+                    </div>
+                </div>
+
+                <div class="nav-search">
+                    <input placeholder=" Search " class="search-input">
+                    <div class="search-ico">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <section>
+        <h1 align="center">Today's Articles</h1>
+    </section>
+    <br>
+    <div class="article">
+        {% for i in article %}
+            <div class="content">
+                <p class="text">{{i.name}}</p>
+                <a href="{% url 'detail' i.id %}"><p>{{i.company}}</p></a>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</body>
+</html>
