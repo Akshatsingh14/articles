@@ -4,9 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .text{
+            font-size: 18px;
+            color: black;
+        }
+        .content h3{
+            color: crimson;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .content{
+            border: 2px solid red;
+            height: 64%;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -39,13 +55,11 @@
     </section>
     <br>
     <div class="article">
-        {% for i in article %}
             <div class="content">
-                <p class="text">{{i.name}}</p>
-                <a href="{% url 'detail' i.id %}"><p>{{i.company}}</p></a>
+                <h3>By {{data.company}}</h3>
+                <p class="text">{{data.desc}}</p>
             </div>
             <br>
-        {% endfor %}
     </div>
 </body>
 </html>
