@@ -28,9 +28,11 @@ This project offers an intuitive interface to browse articles and read their ful
 ## **How It Works**  
 
 1. **Main Page:**  
-   - The application retrieves all articles from the database and displays their titles with a snippet of their description.  
+   - The application retrieves all articles from the database and displays their titles with a snippet of their description.
+![Screenshot 2024-12-17 130659](https://github.com/user-attachments/assets/0221fbe7-4281-4d6b-b505-90371b2b30e6)
 
 2. **Article Detail:**  
-   - Each article is linked to a detailed page that shows the full title and the complete description when clicked.  
+   - Each article is linked to a detailed page that shows the full title and the complete description when clicked.
+![Screenshot 2024-12-17 130724](https://github.com/user-attachments/assets/be9e5874-46e5-4651-9a75-03c4b26e1a4b)  
 
 ---
